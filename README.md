@@ -13,3 +13,7 @@ helm install <name> . -n <namespace>
 ```sh
 helm uninstall <name> -n <namespace>
 ```
+
+## Other references
+
+- https://github.com/awslabs/ecs-nginx-reverse-proxy/tree/master/reverse-proxy
