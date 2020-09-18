@@ -1,6 +1,6 @@
-# Nginx Sidecar Reverse Proxy
+# NGINX Reverse Proxy Sidecar
 
-This Helm Chart helps install NGINX Reverse Proxy sidecar against an example Tomcat server in Kubernetes.
+This Helm Chart helps deploy an NGINX Reverse Proxy Sidecar Container for an example Tomcat server in Kubernetes.
 
 ## Installing the Chart
 
