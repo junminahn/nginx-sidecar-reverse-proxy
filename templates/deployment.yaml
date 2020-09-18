@@ -23,6 +23,8 @@ spec:
         - name: tomcat
           imagePullPolicy: IfNotPresent
           image: tomcat
+          resources:
+            {{- toYaml .Values.resources.tomcat | nindent 12 }}
           volumeMounts:
             - mountPath: /tmp/webapps
               name: webapps
@@ -42,12 +44,7 @@ spec:
               containerPort: 80
               protocol: TCP
           resources:
-            limits:
-              cpu: 300m
-              memory: 512Mi
-            requests:
-              cpu: 200m
-              memory: 256Mi
+            {{- toYaml .Values.resources.nginx | nindent 12 }}
           volumeMounts:
             - mountPath: /etc/nginx/conf.d
               name: conf

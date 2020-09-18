@@ -14,7 +14,7 @@ spec:
       app.kubernetes.io/name: {{ include "..name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   ports:
-    - port: 80
+    - port: {{ .Values.service.port }}
       targetPort: http
       protocol: TCP
       name: http
