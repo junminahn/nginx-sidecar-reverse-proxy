@@ -38,7 +38,9 @@ spec:
           imagePullPolicy: IfNotPresent
           name: nginx
           ports:
-            - containerPort: 80
+            - name: http
+              containerPort: 80
+              protocol: TCP
           resources:
             limits:
               cpu: 300m

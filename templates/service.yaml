@@ -15,10 +15,12 @@ spec:
       app.kubernetes.io/instance: {{ .Release.Name }}
   ports:
     - port: 80
-      targetPort: 80
+      targetPort: http
+      protocol: TCP
       name: http
     - port: 443
-      targetPort: 80
+      targetPort: http
+      protocol: TCP
       name: https
   selector:
     app.kubernetes.io/name: {{ include "..name" . }}
